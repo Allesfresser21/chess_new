@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Добро пожаловать в шахматный клуб!</h1>
+</div>
+<div class="intro">
+    <p>Здесь вы найдёте:</p>
+    <ul>
+        <li>Интерактивные задачи на тактику</li>
+        <li>Полезные ссылки на обучающие материалы</li>
+        <li>Форму обратной связи</li>
+        <li>Регистрацию для сохранения прогресса</li>
+    </ul>
+    <p>Начните своё путешествие в мир шахмат уже сегодня!</p>
+    <p>Ниже - приветственное видео!</p>
+</div>
+<div class="video-container">
+  <video width="100%" controls>
+    <source src="{{ url_for('static', filename='img/itsme.mp4') }}" type="video/mp4">
+    Ваш браузер не поддерживает воспроизведение видео.
+  </video>
+</div>
+{% endblock %}

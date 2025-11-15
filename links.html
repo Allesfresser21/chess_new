@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Полезные ссылки{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Полезные ссылки</h1>
+</div>
+
+<div class="links-grid">
+    <!-- Канал 1 -->
+    <div class="video-card">
+        <a href="https://www.youtube.com/@ChessMasterClub" target="_blank">
+            <img src="https://img.youtube.com/vi/Pyx7psfBcgA/maxresdefault.jpg"
+                 alt=""
+                 class="video-card__image">
+        </a>
+        <div class="video-card__description">
+            <h3>ChessMaster</h3>
+            <p>Наиболее популярный российский канал по шахматам, включающий в себя множество форматов.</p>
+        </div>
+    </div>
+
+    <!-- Канал 2 -->
+    <div class="video-card">
+        <a href="https://www.youtube.com/@AndreyMikitin/featured" target="_blank">
+            <img src="https://img.youtube.com/vi/HvKv0N0_Yi0/maxresdefault.jpg"
+                 alt=""
+                 class="video-card__image">
+        </a>
+        <div class="video-card__description">
+            <h3>Шахматы это круто</h3>
+            <p>Отечественный канал с разборами партий Гроссмейстеров от мужика с прикольными фразами.</p>
+        </div>
+    </div>
+
+    <!-- Видео 3 -->
+    <div class="video-card">
+        <a href="https://www.youtube.com/watch?v=rmbU97iftC8&list=PLBRObSmbZluTpMdP-rUL3bQ5GA8v4dMbT&pp=0gcJCbAEOCosWNin" target="_blank">
+            <img src="https://img.youtube.com/vi/rmbU97iftC8/maxresdefault.jpg"
+                 alt="GothamChess - дебюты"
+                 class="video-card__image">
+        </a>
+        <div class="video-card__description">
+            <h3>Обучение дебютам от GothamChess</h3>
+            <p>Плейлист обучающих видео от самого популярного ютубера по шахматам!</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

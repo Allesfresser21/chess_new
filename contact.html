@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Обратная связь{% endblock %}
+
+{% block content %}
+<form method="POST" class="contact-form">
+    <div class="form-group">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <!-- Автозаполнение для авторизованных -->
+        <input
+            type="email"
+            id="email"
+            name="email"
+            value="{{ initial_email }}"
+            required
+        >
+    </div>
+    <div class="form-group">
+        <label for="message">Сообщение:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit">Отправить</button>
+</form>
+
+<!-- Блок с сообщениями -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <ul class="flashes">
+      {% for category, msg in messages %}
+        <li class="flash-{{ category }}">{{ msg }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+{% endblock %}

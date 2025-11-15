@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Профиль{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Профиль</h1>
+</div>
+<div class="profile-card">
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Имя пользователя:</strong> {{ user.username }}</p>
+    <a href="{{ url_for('logout') }}" class="btn btn-logout">Выход</a>
+</div>
+{% endblock %}
